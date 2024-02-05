@@ -6,13 +6,14 @@ import java.util.Objects;
 @Entity
 @Table (name = "cars")
 public class Car {
-    @Column
+    @Column(name = "model")
     private String model;
-    @Column
+    @Column(name = "series")
     private int series;
 
     @Id
     @GeneratedValue
+    @Column(name = "cars_id")
     private Long id;
     @OneToOne(mappedBy="car")
     private User user;
